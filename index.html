@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Custom Forms Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery (for file upload name) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      background: #f1f5f9;
+    }
+    h2 {
+      margin-top: 40px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .card {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1 class="text-center mt-4">🔥 Custom Forms Full Project</h1>
+
+  <!-- 🔹 CUSTOM CHECKBOX -->
+  <h2>1. Custom Checkbox</h2>
+  <div class="card">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="check1">
+      <label class="custom-control-label" for="check1">Accept Terms</label>
+    </div>
+  </div>
+
+  <!-- 🔹 CUSTOM SWITCH -->
+  <h2>2. Custom Switch</h2>
+  <div class="card">
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="switch1">
+      <label class="custom-control-label" for="switch1">Toggle Me</label>
+    </div>
+  </div>
+
+  <!-- 🔹 CUSTOM RADIO -->
+  <h2>3. Custom Radio</h2>
+  <div class="card">
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="radio1" name="gender">
+      <label class="custom-control-label" for="radio1">Male</label>
+    </div>
+
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="radio2" name="gender">
+      <label class="custom-control-label" for="radio2">Female</label>
+    </div>
+  </div>
+
+  <!-- 🔹 INLINE CUSTOM -->
+  <h2>4. Inline Custom Controls</h2>
+  <div class="card">
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" class="custom-control-input" id="inline1" name="r">
+      <label class="custom-control-label" for="inline1">Option 1</label>
+    </div>
+
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" class="custom-control-input" id="inline2" name="r">
+      <label class="custom-control-label" for="inline2">Option 2</label>
+    </div>
+  </div>
+
+  <!-- 🔹 CUSTOM SELECT -->
+  <h2>5. Custom Select</h2>
+  <div class="card">
+    <select class="custom-select mb-3">
+      <option selected>Select Course</option>
+      <option>HTML</option>
+      <option>CSS</option>
+      <option>Bootstrap</option>
+    </select>
+
+    <select class="custom-select custom-select-sm mb-2">
+      <option>Small Select</option>
+    </select>
+
+    <select class="custom-select custom-select-lg">
+      <option>Large Select</option>
+    </select>
+  </div>
+
+  <!-- 🔹 CUSTOM RANGE -->
+  <h2>6. Custom Range</h2>
+  <div class="card">
+    <label>Volume</label>
+    <input type="range" class="custom-range">
+  </div>
+
+  <!-- 🔹 CUSTOM FILE -->
+  <h2>7. Custom File Upload</h2>
+  <div class="card">
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="file1">
+      <label class="custom-file-label" for="file1">Choose file</label>
+    </div>
+  </div>
+
+</div>
+
+<!-- Script for file name -->
+<script>
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+
+</body>
+</html>
